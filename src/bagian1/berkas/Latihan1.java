@@ -1,0 +1,25 @@
+package bagian1.berkas;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Latihan1 {
+
+    public static void main(String[] args) throws IOException {
+
+        File berkas = new File("catatan.txt");
+
+        if (berkas.createNewFile()) {
+            System.out.println("Berkas dibuat : " + berkas.getName());
+        } else {
+            System.out.println("Berkas sudah ada : " + berkas.getName());
+        }
+
+        System.out.println("Apakah ada? : " + berkas.exists());
+        System.out.println("Path Absolut : " + berkas.getAbsolutePath());
+        System.out.println("Ukuran : " + berkas.length() + " byte");
+        System.out.println("Dapat dibaca : " + berkas.canRead());
+
+    }
+
+}
